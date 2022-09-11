@@ -1,4 +1,4 @@
-export default interface CliCommandInterface {
+export interface CliCommandInterface {
   readonly name: string;
   execute(...parametrs: string[]): void;
 }
