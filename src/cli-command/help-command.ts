@@ -1,4 +1,4 @@
-import CliCommandInterface from './cli-command.interface.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 import chalk from 'chalk';
 
 const outputColor = chalk.green;

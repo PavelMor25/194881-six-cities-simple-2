@@ -1,0 +1,91 @@
+{
+  "api": {
+    "titles": [
+      "Роскошные апартаменты",
+      "Квартира",
+      "Комната",
+      "Отель",
+      "Дом"
+    ],
+    "descriptions": [
+      "Роскошная, красивая чистая",
+      "В самом центре города",
+      "Прекрасные и тихие соседи",
+      "Только море и вы",
+      "Отдохните в чудесном месте",
+      "Все что вам нужно для жизни здесь",
+      "Дешево и со вкусом"
+    ],
+    "cities": [
+      "Paris",
+      "Cologne",
+      "Brussels",
+      "Amsterdam",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "previews": [
+      "preview-1.jpg",
+      "preview-2.jpg",
+      "preview-3.jpg",
+      "preview-4.jpg",
+      "preview-5.jpg"
+    ],
+    "photos": [
+      "photos-1.jpg",
+      "photos-2.jpg",
+      "photos-3.jpg",
+      "photos-4.jpg",
+      "photos-5.jpg",
+      "photos-6.jpg"
+    ],
+    "types": [
+      "Apartment",
+      "House",
+      "Room",
+      "Hotel"
+    ],
+    "facilities": [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "names": [
+      "Иван",
+      "Петр",
+      "Анна",
+      "Олег",
+      "Александра"
+    ],
+    "emails": [
+      "who@steal.potato",
+      "some@email.coma",
+      "work@hard.no",
+      "ineed@some.reasons",
+      "pum@purum.pum"
+    ],
+    "avatars": [
+      "avatar-1.jpg",
+      "avatar-2.jpg",
+      "avatar-3.jpg",
+      "avatar-4.jpg",
+      "avatar-5.jpg",
+      "avatar-6.jpg"
+    ],
+    "passwords": [
+      "asd!sad223ERd",
+      "password1",
+      "qwerty",
+      "12345q",
+      "q12345="
+    ],
+    "typeUsers": [
+      "Standart",
+      "Pro"
+    ]
+  }
+}

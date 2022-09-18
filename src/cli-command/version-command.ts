@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import chalk from 'chalk';
-import CliCommandInterface from './cli-command.interface.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 
 const outputColor = chalk.magenta.bold;
 
