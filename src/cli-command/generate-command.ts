@@ -3,7 +3,7 @@ import TSVFileWriter from '../common/file-writer/tsv-file-writer.js';
 import got from 'got';
 import OfferGenerator from '../common/offer-generator/offer-generator.js';
 import { MockData } from '../types/mock-data.type.js';
-import CliCommandInterface from './cli-command.interface.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 
 const outputColor = chalk.red;
 

@@ -1,5 +1,5 @@
 import TsvFileReader from '../common/file-reader/tsv-file-reader.js';
-import CliCommandInterface from './cli-command.interface.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 import chalk from 'chalk';
 import {createOffer, getErrorMessage} from '../utils/common.js';
 
