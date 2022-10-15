@@ -1,4 +1,4 @@
-import CliCommandInterface from '../cli-command/cli-command.interface.js';
+import {CliCommandInterface} from '../cli-command/cli-command.interface.js';
 import chalk from 'chalk';
 
 type ParsedCommand = {
