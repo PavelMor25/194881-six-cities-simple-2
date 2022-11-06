@@ -1,7 +1,9 @@
+import { City } from './city.enum.js';
+
 export type MockData = {
   titles: string[],
   descriptions: string[],
-  cities: string[],
+  cities: City[],
   previews: string[],
   photos: string[],
   types: string[],
@@ -9,6 +11,5 @@ export type MockData = {
   names: string[],
   emails: string[],
   avatars: string[],
-  passwords: string[],
   typeUsers: string[]
 }

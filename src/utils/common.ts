@@ -1,16 +1,22 @@
 import { UserType } from '../types/user-type.enum.js';
 import { OfferType } from '../types/offer-type.enum.js';
-import { City } from '../types/city.enum.js';
+import { CityName } from '../types/city.enum.js';
 import { Offer } from '../types/offer.type.js';
+import crypto from 'crypto';
 
 export const createOffer = (row: string) => {
   const tokens = row.replace('\n', '').split('\t');
-  const [title, description, postDate, city, preview, photos, isPremium, rating, type, rooms, guests, price, facilities, comments, lat, lng, name, email, avatar, password, typeUser] = tokens;
+  const [title, description, postDate, city, preview, photos, isPremium, rating, type, rooms, guests, price, facilities, comments, lat, lng, name, email, avatar, typeUser] = tokens;
+  const [nameCity, latCity, lngCity] = city.split(';');
   return {
     title,
     description,
     postDate: new Date(postDate),
-    city: City[city as 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg' | 'Dusseldorf'],
+    city: {
+      name: CityName[nameCity as 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg' | 'Dusseldorf'],
+      lat: Number.parseFloat(latCity),
+      lng: Number.parseFloat(lngCity),
+    },
     preview,
     photos: photos.split(';'),
     isPremium: Boolean(isPremium),
@@ -29,12 +35,15 @@ export const createOffer = (row: string) => {
       name,
       email,
       avatar,
-      password,
       type: UserType[typeUser as 'Standart' | 'Pro']
     }
   } as Offer;
 };
 
-
 export const getErrorMessage = (error: unknown): string =>
   error instanceof Error ? error.message : '';
+
+export const createSHA256 = (line: string, salt: string): string => {
+  const shaHasher = crypto.createHmac('sha256', salt);
+  return shaHasher.update(line).digest('hex');
+};
