@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { City } from '../../types/city.enum.js';
 import { MockData } from '../../types/mock-data.type.js';
 import { generateRandomValue, getRandomItem, getRandomItems } from '../../utils/random.js';
 import { OfferGeneratorInterface } from './offer-generator.interface.js';
@@ -35,7 +36,7 @@ export default class OfferGenerator implements OfferGeneratorInterface {
     const title = getRandomItem<string>(this.mockData.titles);
     const description = getRandomItem<string>(this.mockData.descriptions);
     const postDate =  dayjs().subtract(generateRandomValue(FIRST_WEEK_DAY, LAST_WEEK_DAY), 'day').toISOString();
-    const city = getRandomItem<string>(this.mockData.cities);
+    const city = Object.values(getRandomItem<City>(this.mockData.cities)).join(';');
     const preview = getRandomItem<string>(this.mockData.previews);
     const photos = getRandomItems<string>(this.mockData.photos).join(';');
     const isPremium = getRandomItem<boolean>([false, true]);
@@ -51,7 +52,6 @@ export default class OfferGenerator implements OfferGeneratorInterface {
     const name = getRandomItem<string>(this.mockData.names);
     const email = getRandomItem<string>(this.mockData.emails);
     const avatar = getRandomItem<string>(this.mockData.avatars);
-    const password = getRandomItem<string>(this.mockData.passwords);
     const typeUser = getRandomItem<string>(this.mockData.typeUsers);
 
     return [
@@ -74,7 +74,6 @@ export default class OfferGenerator implements OfferGeneratorInterface {
       name,
       email,
       avatar,
-      password,
       typeUser
     ].join('\t');
   }
